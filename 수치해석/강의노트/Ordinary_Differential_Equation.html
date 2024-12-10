@@ -9490,7 +9490,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">itr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mi">100</span><span class="p">):</span>
@@ -9500,7 +9500,7 @@ $$</p>
     <span class="n">t_values</span><span class="p">,</span> <span class="n">y_values2</span><span class="p">,</span> <span class="n">z_values2</span> <span class="o">=</span> <span class="n">ODESolver</span><span class="p">()</span><span class="o">.</span><span class="n">RK2_2nd</span><span class="p">(</span><span class="n">dfz</span><span class="o">=</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">y</span><span class="p">,</span> 
                                         <span class="n">dfy</span><span class="o">=</span><span class="k">lambda</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="n">z</span><span class="p">,</span> 
                                         <span class="n">y0</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">itr</span><span class="p">)</span>
-    <span class="n">Rel_err</span> <span class="o">=</span> <span class="p">((</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values4</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span><span class="o">/</span><span class="p">(</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">Rel_err</span> <span class="o">=</span> <span class="p">((</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values4</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span><span class="o">/</span><span class="p">(</span><span class="n">exact_solution</span><span class="p">(</span><span class="n">t_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">y_values4</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'# iteration: </span><span class="si">{</span><span class="n">itr</span><span class="si">}</span><span class="s1">, Relative Error:</span><span class="si">{</span><span class="n">Rel_err</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%'</span><span class="p">)</span>
 </pre></div>
@@ -9515,21 +9515,21 @@ $$</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre># iteration: 10, Relative Error:-99.98%
-# iteration: 110, Relative Error:-100.00%
-# iteration: 210, Relative Error:-100.00%
-# iteration: 310, Relative Error:-100.00%
-# iteration: 410, Relative Error:-100.00%
-# iteration: 510, Relative Error:-100.00%
-# iteration: 610, Relative Error:-100.00%
-# iteration: 710, Relative Error:-100.00%
-# iteration: 810, Relative Error:-100.00%
-# iteration: 910, Relative Error:-100.00%
-# iteration: 1010, Relative Error:-100.00%
-# iteration: 1110, Relative Error:-100.00%
-# iteration: 1210, Relative Error:-100.00%
-# iteration: 1310, Relative Error:-100.00%
-# iteration: 1410, Relative Error:-100.00%
+<pre># iteration: 10, Relative Error:19.16%
+# iteration: 110, Relative Error:1.83%
+# iteration: 210, Relative Error:0.96%
+# iteration: 310, Relative Error:0.65%
+# iteration: 410, Relative Error:0.49%
+# iteration: 510, Relative Error:0.40%
+# iteration: 610, Relative Error:0.33%
+# iteration: 710, Relative Error:0.28%
+# iteration: 810, Relative Error:0.25%
+# iteration: 910, Relative Error:0.22%
+# iteration: 1010, Relative Error:0.20%
+# iteration: 1110, Relative Error:0.18%
+# iteration: 1210, Relative Error:0.17%
+# iteration: 1310, Relative Error:0.15%
+# iteration: 1410, Relative Error:0.14%
 </pre>
 </div>
 </div>
@@ -10085,6 +10085,17 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="%EA%B2%BD%EA%B3%84%EC%B9%98-%EB%AC%B8%EC%A0%9C%EC%9D%98-%ED%95%B4%EB%B2%95(BVP)">경계치 문제의 해법(BVP)<a class="anchor-link" href="#%EA%B2%BD%EA%B3%84%EC%B9%98-%EB%AC%B8%EC%A0%9C%EC%9D%98-%ED%95%B4%EB%B2%95(BVP)">¶</a></h1><p><em>Boundary Value Problem</em></p>
 </div>
 </div>
@@ -10124,6 +10135,17 @@ $$</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>컴퓨터로 이 문제를 풀기 위해선 역시 구간을 잘라 격자를 만들어내야 한다. 격자가 만들어지면 유한차분법, 테일러 급수 전개 등의 방법을 사용할 수 있다.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 </div>
 </div>
 </div>
@@ -10193,7 +10215,7 @@ j=1,\ y_2 + (-2 a(\Delta x)^2)y_1 + y_0 = b(\Delta x)^2\\
 j=2,\ y_3 + (-2 a(\Delta x)^2)y_2 + y_1 = b(\Delta x)^2\\
 j=3,\ y_4 + (-2 a(\Delta x)^2)y_3 + y_2 = b(\Delta x)^2\\
 \quad\quad\quad\quad\quad\quad\vdots\\
-j=n,\ y_{n+1} (-2 a(\Delta x)^2)y_{n} + y_{n-1} = b(\Delta x)^2
+j=n,\ y_{n+1} + (-2 a(\Delta x)^2)y_{n} + y_{n-1} = b(\Delta x)^2
 \end{cases}
 $$</p>
 </div>
@@ -10227,7 +10249,7 @@ $$</p>
 \end{bmatrix}
 
 \begin{bmatrix}
-y_1\\y_1\\ \vdots\\ \vdots \\ y_n
+y_0\\y_1\\ \vdots\\ \vdots \\ y_n
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -10870,7 +10892,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
@@ -10911,7 +10933,7 @@ Logs:
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11004,7 +11026,7 @@ Logs:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Extract x and y values</span>
@@ -11145,7 +11167,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -11313,7 +11335,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">solver</span> <span class="o">=</span> <span class="n">ODESolver</span><span class="p">()</span>
@@ -11345,7 +11367,7 @@ Logs
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -11438,7 +11460,7 @@ Logs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>

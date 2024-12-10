@@ -1,7 +1,5 @@
 import numpy as np
 
-import numpy as np
-
 class Linear_Equation:
     """
     A class for solving systems of linear equations using different numerical methods.
