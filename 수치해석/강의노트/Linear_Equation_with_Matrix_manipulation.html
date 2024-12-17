@@ -7827,9 +7827,9 @@ $$
 \end{bmatrix}
 \bf{A}^T =
 \begin{bmatrix}
-2&amp;4\\
-1&amp;3\\
-5&amp;1
+4&amp;2\\
+3&amp;1\\
+1&amp;5
 \end{bmatrix}
 \end{aligned}
 $$</li>
@@ -8135,7 +8135,8 @@ x_1\\x_2\\x_3
 \begin{bmatrix}
 r_1''\\r_2''\\r_3''
 \end{bmatrix}
-\end{aligned}</p>
+\end{aligned}
+$$</p>
 </div>
 </div>
 </div>
@@ -8731,12 +8732,12 @@ Cell <span class="ansi-green-intense-fg ansi-bold">In[5], line 12</span>
 <span class="ansi-green-fg">     14</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">x=</span><span style="color: rgb(175,0,0)">'</span>,x)
 <span class="ansi-green-fg">     15</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">'</span><span class="ansi-bold" style="color: rgb(175,95,0)">\n</span><span style="color: rgb(175,0,0)">'</span><span style="color: rgb(98,98,98)">.</span>join(logs))
 
-File <span class="ansi-green-intense-fg ansi-bold">c:\Users\USER\OneDrive\바탕 화면\2024_2학기\수치해석\강의노트\Linear_Equation.py:71</span>, in <span class="ansi-cyan-fg">Linear_Equation.Gauss_Jordan</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
-<span class="ansi-green-fg">     69</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> j <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span>(n):
-<span class="ansi-green-fg">     70</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> augmented_matrix[j, j] <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">0</span>:
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 71</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ZeroDivisionError</span>(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Pivot element is zero. The system cannot be solved.</span><span style="color: rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg">     72</span>     augmented_matrix[j] <span style="color: rgb(98,98,98)">/</span><span style="color: rgb(98,98,98)">=</span> augmented_matrix[j, j]
-<span class="ansi-green-fg">     73</span>     logs<span style="color: rgb(98,98,98)">.</span>append(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Step </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>j<span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">1</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">: Normalize row </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>j<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">:</span><span class="ansi-bold" style="color: rgb(175,95,0)">\n</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>augmented_matrix<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">"</span>)
+File <span class="ansi-green-intense-fg ansi-bold">c:\Users\USER\OneDrive\바탕 화면\2024_2학기\수치해석\강의노트\Linear_Equation.py:69</span>, in <span class="ansi-cyan-fg">Linear_Equation.Gauss_Jordan</span><span class="ansi-blue-intense-fg ansi-bold">(self)</span>
+<span class="ansi-green-fg">     67</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> j <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> <span style="color: rgb(0,135,0)">range</span>(n):
+<span class="ansi-green-fg">     68</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> augmented_matrix[j, j] <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">0</span>:
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 69</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ZeroDivisionError</span>(<span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Pivot element is zero. The system cannot be solved.</span><span style="color: rgb(175,0,0)">"</span>)
+<span class="ansi-green-fg">     70</span>     augmented_matrix[j] <span style="color: rgb(98,98,98)">/</span><span style="color: rgb(98,98,98)">=</span> augmented_matrix[j, j]
+<span class="ansi-green-fg">     71</span>     logs<span style="color: rgb(98,98,98)">.</span>append(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">Step </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>j<span style="color: rgb(98,98,98)">+</span><span style="color: rgb(98,98,98)">1</span><span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">: Normalize row </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>j<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">:</span><span class="ansi-bold" style="color: rgb(175,95,0)">\n</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>augmented_matrix<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)">"</span>)
 
 <span class="ansi-red-intense-fg ansi-bold">ZeroDivisionError</span>: Pivot element is zero. The system cannot be solved.</pre>
 </div>
@@ -9140,33 +9141,33 @@ $$</p>
 b'_2 = b_2 - a_2 \frac{c_1}{b_1}
 $$
 $$
-r'_2 = r_2 - \frac{a_2 r_1}{b'_2}
+r'_2 = r_2 - \frac{a_2 r_1}{b'_1}
 $$</p>
 <p>세 번째 행:</p>
 <p>$$
 b'_3 = b_3 - a_3 \frac{c_2}{b'_2}
 $$
 $$
-r'_3 = r_3 - \frac{a_3 r'_2}{b'_3}
+r'_3 = r_3 - \frac{a_3 r'_2}{b'_2}
 $$</p>
 <p>이 과정을 마지막 행까지 반복하여 상삼각 행렬 형태로 변환합니다.</p>
 <hr/>
 <h2 id="2.-Backward-Substitution-(%ED%9B%84%EB%B0%A9-%EB%8C%80%EC%9E%85)">2. <strong>Backward Substitution (후방 대입)</strong><a class="anchor-link" href="#2.-Backward-Substitution-(%ED%9B%84%EB%B0%A9-%EB%8C%80%EC%9E%85)">¶</a></h2><p>이제 상삼각 행렬이 되었으므로, 마지막 방정식부터 차례대로 미지수를 구하는 후방 대입을 수행합니다.</p>
 <h3 id="Step-1:-%EB%A7%88%EC%A7%80%EB%A7%89-%EB%AF%B8%EC%A7%80%EC%88%98-$x_n$-%EA%B5%AC%ED%95%98%EA%B8%B0">Step 1: 마지막 미지수 $x_n$ 구하기<a class="anchor-link" href="#Step-1:-%EB%A7%88%EC%A7%80%EB%A7%89-%EB%AF%B8%EC%A7%80%EC%88%98-$x_n$-%EA%B5%AC%ED%95%98%EA%B8%B0">¶</a></h3><p>마지막 방정식에서 $x_n$을 구합니다:
 $$
-x_n = r'_n
+x_n = \frac{r'_n}{b'_n}
 $$</p>
 <h3 id="Step-2:-%EC%B0%A8%EB%A1%80%EB%8C%80%EB%A1%9C-%EC%9D%B4%EC%A0%84-%EB%AF%B8%EC%A7%80%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0">Step 2: 차례대로 이전 미지수 구하기<a class="anchor-link" href="#Step-2:-%EC%B0%A8%EB%A1%80%EB%8C%80%EB%A1%9C-%EC%9D%B4%EC%A0%84-%EB%AF%B8%EC%A7%80%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0">¶</a></h3><p>차례대로 이전 방정식으로 역대입하여 $x_{n-1}, x_{n-2}, \dots, x_1$을 구합니다. 일반적으로:
 $$
-x_i = r'_i - c'_i x_{i+1}
+x_i = \frac{r'_i - c'_i x_{i+1}}{b_i'}
 $$</p>
 <p>예를 들어, $x_{n-1}$은 다음과 같이 계산됩니다:
 $$
-x_{n-1} = r'_{n-1} - c'_{n-1} x_n
+x_{n-1} = \frac{r'_{n-1} - c'_{n-1} x_n}{b_{n-1}'}
 $$</p>
 <p>그 이전 $x_{n-2}$는:
 $$
-x_{n-2} = r'_{n-2} - c'_{n-2} x_{n-1}
+x_{n-2} = \frac{r'_{n-2} - c'_{n-2} x_{n-1}}{b_{n-2}'}
 $$</p>
 <p>이 과정을 $x_1$까지 반복합니다.</p>
 <hr/>
@@ -9647,7 +9648,7 @@ $$</p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>$$
 \mathbf{A}_{n\times n}\\
-|a_{ii}| &gt; \sum^{n}_{j=1 ; j \neq i}|a_{ij}
+|a_{ii}| &gt; \sum^{n}_{j=1 ; j \neq i}|a_{ij}|
 $$</p>
 </div>
 </div>
@@ -9791,7 +9792,7 @@ $$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -9955,7 +9956,7 @@ Converged after 21 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -10127,7 +10128,7 @@ Did not converge after 10 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -10151,7 +10152,7 @@ Did not converge after 10 iterations.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[1.],
        [1.],
@@ -10282,7 +10283,7 @@ Did not converge after 10 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -10308,7 +10309,7 @@ Did not converge after 10 iterations.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[ 55.91566086],
        [ 85.74110349],
@@ -10323,7 +10324,7 @@ Did not converge after 10 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">A_inv</span>
@@ -10337,7 +10338,7 @@ Did not converge after 10 iterations.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[0.07450454, 0.        , 0.        , 0.        ],
        [0.08161933, 0.08161933, 0.        , 0.        ],
@@ -10352,7 +10353,7 @@ Did not converge after 10 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># (b)</span>
@@ -10371,7 +10372,7 @@ Did not converge after 10 iterations.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[55.91566086],
        [85.74110349],
@@ -10386,7 +10387,7 @@ Did not converge after 10 iterations.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">delta</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
@@ -10400,7 +10401,7 @@ Did not converge after 10 iterations.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>array([[   0.   ],
        [  -0.   ],

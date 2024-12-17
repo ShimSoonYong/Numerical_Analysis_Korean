@@ -140,63 +140,40 @@ class TridiagonalMatrix:
         self.c = c.astype(np.float64)
         self.r = r.astype(np.float64)
 
-    def TDMA(self) -> tuple:
+    def TDMA(a, b, c, r):
         """
-        Solve a tridiagonal system of linear equations using the Thomas Algorithm (TDMA).
-
-        The system is represented as:
-            Ax = r
-        where A is a tridiagonal matrix:
-        ```
-            A = [[b[0], c[0],  0,   0,   ...,  0],
-                 [a[0], b[1], c[1], 0,   ...,  0],
-                 [0,    a[1], b[2], c[2],...,  0],
-                 ...
-                 [0,    ...,  a[n-1], b[n]]]
-        ```
-            r is the right-hand side vector.
-
+        TDMA (Thomas Algorithm) for solving tridiagonal systems.
+        
+        Parameters:
+            a (np.array): lower diagonal (length n-1)
+            b (np.array): main diagonal (length n)
+            c (np.array): upper diagonal (length n-1)
+            r (np.array): right-hand side vector (length n)
+        
         Returns:
-            tuple:
-                - logs (list of str): Logs of each step in the forward elimination.
-                - x (np.array): Solution vector to the linear system (length n).
-
-        Example:
-            ```
-            a = np.array([2, 3])
-            b = np.array([4, 5, 6])
-            c = np.array([7, 8])
-            r = np.array([10, 11, 12])
-            tridiagonal = TridiagonalMatrix(a, b, c, r)
-            logs, x = tridiagonal.TDMA()
-            ```
+            logs: List of intermediate steps for debugging.
+            x: Solution vector (length n).
         """
-        n = len(self.b)
+        n = len(b)
         x = np.zeros(n)
         logs = []
 
-        # Copy arrays to avoid modifying the original
-        a = np.copy(self.a)
-        b = np.copy(self.b)
-        c = np.copy(self.c)
-        r = np.copy(self.r)
-
         # Forward elimination
         for i in range(1, n):
-            factor = a[i - 1] / b[i - 1]
-            b[i] = b[i] - factor * c[i - 1]
-            r[i] = r[i] - factor * r[i - 1]
+            factor = a[i-1] / b[i-1]
+            b[i] -= factor * c[i-1]
+            r[i] -= factor * r[i-1]
             logs.append(f"Step {i}: Forward Elimination:\n"
                         f"a = {a}\n"
                         f"b = {b}\n"
                         f"c = {c}\n"
-                        f"r = {r}")
+                        f"r = {r}\n")
 
         # Back substitution
         x[-1] = r[-1] / b[-1]
         logs.append(f"Back Substitution: x[{n-1}] = {x[-1]}")
 
-        for i in range(n - 2, -1, -1):
+        for i in range(n-2, -1, -1):
             x[i] = (r[i] - c[i] * x[i + 1]) / b[i]
             logs.append(f"Back Substitution: x[{i}] = {x[i]}")
 

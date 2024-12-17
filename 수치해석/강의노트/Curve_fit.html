@@ -7735,9 +7735,13 @@ $$</p>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>$$
-= 2\sum[a_0 + a_1 x_i + \cdots a_m x^m_i - f(x_i)]^2 \frac{\partial}{\partial a_0}[a_0 + a_1 x_i + \cdots a_m x_i^m f(x)]
+= 2\sum[a_0 + a_1 x_i + \cdots a_m x^m_i - f(x_i)] \frac{\partial}{\partial a_0}[a_0 + a_1 x_i + \cdots a_m x_i^m - f(x_i)]
 $$</p>
 <p>그런데 미분기호 뒤쪽의 대괄호에서 $a_0$와 상관없는 나머지 항들은 전부 0이 되고, $a_0$만 단독으로 있는 항은 1이 된다.</p>
+<p>즉,</p>
+<p>$$
+\frac{\partial}{\partial a_0}[a_0 + a_1 x_i + \cdots a_m x_i^m - f(x_i)]=1
+$$</p>
 </div>
 </div>
 </div>
@@ -7748,6 +7752,7 @@ $$</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>따라서 방정식은:</p>
 <p>$$
 = 2\left[\sum a_0 + \sum a_1x_i + \cdots \sum a_m x_i^m - \sum f(x_i) \right] \equiv 0
 $$</p>
