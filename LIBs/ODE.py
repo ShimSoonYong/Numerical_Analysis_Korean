@@ -12,14 +12,14 @@ class ODESolver:
         Generalized Euler Method for solving ODEs.
 
         Parameters:
-            func (callable): Function defining dy/dt = f(y, t).
-            y0 (float or array-like): Initial value(s).
-            t0 (float): Initial time.
-            t_end (float): End time.
-            h (float): Step size.
+            - func (callable): Function defining dy/dt = f(y, t).
+            - y0 (float or array-like): Initial value(s).
+            - t0 (float): Initial time.
+            - t_end (float): End time.
+            - h (float): Step size.
 
         Returns:
-            tuple:
+            - tuple:
                 - t_vals (numpy.ndarray): Array of time values.
                 - y_vals (numpy.ndarray): Array of solution values.
         """
@@ -51,7 +51,7 @@ class ODESolver:
             n (int): Number of time points.
 
         Returns:
-            tuple:
+            - tuple:
                 - t_vals (numpy.ndarray): Array of time values.
                 - y_vals (numpy.ndarray): Array of solution values.
         """
@@ -118,7 +118,7 @@ class ODESolver:
             n (int): Number of time points.
 
         Returns:
-            tuple:
+            - tuple:
                 - t_vals (numpy.ndarray): Array of time values.
                 - y_vals (numpy.ndarray): Array of solution values for y.
                 - z_vals (numpy.ndarray): Array of solution values for z.
@@ -170,7 +170,7 @@ class ODESolver:
             n (int): Number of time points.
 
         Returns:
-            tuple:
+            - tuple:
                 - t_vals (numpy.ndarray): Array of time values.
                 - y_vals (numpy.ndarray): Array of solution values.
         """
@@ -210,7 +210,7 @@ class ODESolver:
             solver (str): Solver method ("Euler", "RK2", "RK4").
 
         Returns:
-            tuple:
+            - tuple:
                 - Final value of U (initial slope).
                 - List of (x, y) pairs.
         """
@@ -283,7 +283,7 @@ class ODESolver:
             x_end (float): End of the domain.
 
         Returns:
-            tuple:
+            - tuple:
                 - n (int): Number of intervals.
                 - logs (list): Logs from the TDMA process.
                 - solution (numpy.ndarray): Solution vector for the tridiagonal system.
@@ -329,7 +329,7 @@ class ODESolver:
             n (int): Number of points.
 
         Returns:
-            tuple:
+            - tuple:
                 - t_vals (numpy.ndarray): Array of time values.
                 - y_vals (numpy.ndarray): Array of solution values for y.
                 - z_vals (numpy.ndarray): Array of solution values for z.
@@ -386,7 +386,7 @@ class ODESolver:
             solver (str): Solver method ("Euler", "RK2", "RK4").
 
         Returns:
-            tuple:
+            - tuple:
                 - Final slope U.
                 - List of tuples [(x, y)] representing the solution.
         """
@@ -482,7 +482,7 @@ def test_all_methods():
     plt.show()
 
     print("Testing Euler Method for second-order ODE...")
-    t_vals, y_vals, z_vals = ODESolver.EulerMethod_2nd(dfz, dfy, y0, z0, t0, t_end, step_size)
+    t_vals, y_vals, z_vals = ODESolver.EulerMethod_2nd(dfz, dfy, y0, z0, t0, t_end, n=n_points)
     plt.plot(t_vals, y_vals, label="y(t) (Euler 2nd-order)")
     plt.plot(t_vals, z_vals, label="z(t) = dy/dt (Euler 2nd-order)")
     plt.legend()
